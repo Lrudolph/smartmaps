@@ -1,0 +1,68 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="500" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200">
+            </ColumnDefinition>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu Grid.ColumnSpan="2">
+            <MenuItem x:Name="main_mi" Header="Datei" >
+                <MenuItem Header="_Neu" />
+                <MenuItem Header="_Import" >
+                    <MenuItem Header="Referenzbild"/>
+                    <MenuItem Header="Sounddatei"/>
+                </MenuItem>
+                <MenuItem Header="_Export" >
+                    <MenuItem Header="Schnittmuster" Click="MenuItem_Click"/>
+                    <MenuItem Header="TipToi-Programm"/>
+                    <MenuItem Header="TipToi-Code"/>
+                </MenuItem>
+                <Separator />
+                <MenuItem Header="_Schließen" />
+            </MenuItem>
+        </Menu>
+        <TabControl Grid.Row="1">
+            <TabItem Header="Werkzeuge">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Button Content="Gebäudeteil"/>
+                    <Button Grid.Row="1" Content="Straße"/>
+                    <Button Grid.Row="2" Content="Gehweg"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Objekte">
+                <TreeView>
+                    <TreeViewItem Header="Gebäude">
+                        <TreeViewItem Header="Z-Gebäude_P1"/>
+                        <TreeViewItem Header="Z-Gebäude_P2"/>
+                    </TreeViewItem>
+                    <TreeViewItem Header="Straßen">
+                        <TreeViewItem Header="Straße1"/>
+                    </TreeViewItem>
+                    <TreeViewItem Header="Gehwege"></TreeViewItem>
+                </TreeView>
+            </TabItem>
+        </TabControl>
+        <Canvas x:Name="main_canvas" Grid.Column="1" Grid.Row="1" MouseDown="Rectangle_Click" >
+
+            <Image Height="449" Width="353" Source="Resources/KarteHTW.png" Loaded="Image_Loaded"/>
+
+            <Line X1="175" X2="175" Y1="0" Y2="449" Fill="Red" Stroke="Red"></Line>
+            <Rectangle Height="23" Width="74" RenderTransformOrigin="0.52,0.47" Canvas.Left="74" Canvas.Top="10" Stroke="Blue"></Rectangle>
+            <Label Content="Z_P1" Canvas.Left="74" Canvas.Top="10" Height="23" Width="74"></Label>
+            <Rectangle Height="120" Width="36" Canvas.Left="91" Canvas.Top="33" MouseDown="RectangleClick"></Rectangle>
+            <Label Content="Z_P2" RenderTransformOrigin="0.533,0.462" Canvas.Left="91" Canvas.Top="127"/>
+        </Canvas>
+    </Grid>
+</Window>

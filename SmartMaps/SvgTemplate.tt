@@ -1,0 +1,38 @@
+﻿<#@ template language="C#" #>
+<svg  xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" width="100%" viewBox="0 0 3000 1800">
+	<g transform="scale(-1,1) translate(-3000)" visibility="visible">
+		<rect id="plane1" x="0" y="0" height="1800" width="3000" style="stroke:#000000; fill: #ffffff"/>
+		<g id="s_1_k">
+			<path d="M 0 <#= 0.25*Width + Depth #> 
+				L <#= Depth #> <#= Depth #> 
+				L <#= Depth + Level #> <#= Depth #> 
+				L <#= Depth + Level #> 0 
+				L <#= Depth + Level + Height #> 0 
+				L <#= Depth + Level + Height + (0.25*Width) #> <#= 0.25*Depth #> 
+				L <#= Depth + Level + Height + (0.25*Width) #> <#= 0.75*Depth #> 
+				L <#= Depth + Level + Height #>  <#= Depth #> 
+				L <#= 2* Level + 2*Height+ 2*Depth #> <#= Depth #>
+				L <#= 3*Depth + 2*Height + 2*Level #> <#= Depth + 0.25*Width #>
+				L <#= 3*Depth + 2*Height + 2*Level #> <#= Depth + 0.75*Width #>
+				L <#= 2*Depth + 2*Height + 2*Level #> <#= Depth + Width #>
+				L <#= Depth + Height + Level #> <#= Depth + Width #>				
+				L <#= Depth + Level + Height + (0.25*Width) #> <#= Width + 1.25*Depth #> 				
+				L <#= Depth + Level + Height + (0.25*Width) #> <#= Width + 1.75*Depth #> 
+				L <#= Depth + Level + Height #> <#= Width + 2*Depth #> 
+				L <#= Depth + Level #> <#= Width + 2*Depth #> 
+				L <#= Depth + Level #> <#= Width + Depth #> 
+				L <#= Depth #> <#= Width + Depth #>
+				L 0 <#= 0.75 *Width + Depth #>
+				z" fill="#ffffff" stroke="blue" stroke-width="0.1mm" />
+			<line x1="<#= Depth #>" y1="<#= Depth #>" x2="<#= Depth #>" y2="<#= Depth + Width#>" stroke="red" stroke-width="0.1mm"/>
+			<line x1="<#= Depth + Level #>" y1="<#= Depth #>" x2="<#= Depth + Level #>" y2="<#= Depth + Width #>" stroke="grey" stroke-width="0.1mm"/>
+			<line x1="<#= Depth + Level + Height #>" y1="0" x2="<#= Depth + Level + Height #>" y2="<#= Width + 2*Depth #> " stroke="red" stroke-width="0.1mm"/>					
+			<line x1="<#= 2*Depth + Level + Height #>" y1="<#= Depth #>" x2="<#= 2*Depth + Level + Height #>" y2="<#= Depth + Width#>" stroke="red" stroke-width="0.1mm"/>	
+			<line x1="<#= 2*Depth +  Level + 2*Height #>" y1="<#= Depth #>" x2="<#= 2*Depth +  Level + 2*Height #>" y2="<#= Depth + Width#>" stroke="grey" stroke-width="0.1mm"/>					
+			<line x1="<#= 2*Depth + 2* Level + 2*Height #>" y1="<#= Depth #>" x2="<#= 2*Depth + 2* Level + 2*Height #>" y2="<#= Depth + Width#>" stroke="red" stroke-width="0.1mm"/>
+			<line x1="<#= Depth + Level #>" y1="<#= Depth #>" x2="<#= Depth + Level + Height #>" y2="<#= Depth #>" stroke="red" stroke-width="0.1mm"/>
+			<line x1="<#= Depth + Level #>" y1="<#= Depth + Width #>" x2="<#= Depth + Level + Height #>" y2="<#= Depth + Width #>" stroke="red" stroke-width="0.1mm"/>
+		</g>
+	</g>
+</svg>
