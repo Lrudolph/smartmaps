@@ -22,10 +22,79 @@ namespace WpfApplication1
     /// </summary>
     public partial class MainWindow : Window
     {
+        Point currentPoint = new Point();
+        private EDrawingMode drawMode;
+        private Object activDrawingObject;
+        private double ClickX = 0.0;
+        private double ClickY = 0.0;
+
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        private void Canvas_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            Canvas myCanvas = (Canvas)sender;
+            ClickX = e.GetPosition(myCanvas).X;
+            ClickY = e.GetPosition(myCanvas).Y;
+
+            myCanvas.MouseMove += DrawingFunctionality;
+            if (e.ButtonState == MouseButtonState.Pressed)
+                currentPoint = e.GetPosition(this);
+            myCanvas.MouseUp += MyCanvas_MouseUp;
+        }
+
+        private void MyCanvas_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Canvas myCanvas = (Canvas)sender;
+            myCanvas.MouseMove -= DrawingFunctionality;
+            activDrawingObject = null;
+        }
+
+        private void DrawingFunctionality(object sender, MouseEventArgs e)
+        {
+            Canvas myCanvas = (Canvas)sender;
+            switch (drawMode)
+            {
+                case EDrawingMode.building:
+                    
+                    Rectangle rect = activDrawingObject as Rectangle ?? new Rectangle();
+                    //rect.Stroke = new Brush(Colors.Blue);
+                    rect.Width = e.GetPosition(myCanvas).X - ClickX;
+                    rect.Height = e.GetPosition(myCanvas).Y - ClickY;
+
+                    myCanvas.Children.Remove(rect);
+                    myCanvas.Children.Add(rect);
+                    Canvas.SetLeft(rect, ClickX);
+                    Canvas.SetTop(rect, ClickY);
+                    
+                    break;
+                case EDrawingMode.street:
+                    break;
+                case EDrawingMode.pavement:
+                    break;
+            }
+        }
+
+            private void Canvas_MouseMove_1(object sender, MouseEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                Line line = new Line();
+
+                line.Stroke = SystemColors.WindowFrameBrush;
+                line.X1 = currentPoint.X;
+                line.Y1 = currentPoint.Y;
+                line.X2 = e.GetPosition(this).X;
+                line.Y2 = e.GetPosition(this).Y;
+
+                currentPoint = e.GetPosition(this);
+
+                main_canvas.Children.Add(line);
+            }
+        }
+
         private void Image_Loaded(object sender, RoutedEventArgs e)
         {
            
@@ -56,21 +125,25 @@ namespace WpfApplication1
             Canvas.SetTop(menu, y);
         }
 
-        private void Rectangle_Click(object sender, MouseButtonEventArgs e)
-        {
-            Canvas t = (Canvas)sender;
-            double x = e.GetPosition(t).X;
-            double y = e.GetPosition(t).Y;
-            buildingmenu menu = new buildingmenu();
-            t.Children.Add(menu);
-            Canvas.SetLeft(menu, x);
-            Canvas.SetTop(menu, y);
-
-        }
-
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
            Console.Out.Write( SVGDesigner.makeQuader(100,200,130));
+        }
+
+        private void Building_Mode_Clicked(object sender, RoutedEventArgs e)
+        {
+            this.drawMode = EDrawingMode.building;
+        }
+
+        private void Street_Mode_Clicked(object sender, RoutedEventArgs e)
+        {
+            this.drawMode = EDrawingMode.street;
+        }
+
+        private void Pavement_Mode_Clicked(object sender, RoutedEventArgs e)
+        {
+            this.drawMode = EDrawingMode.pavement;
+        }
         }
     }
 }

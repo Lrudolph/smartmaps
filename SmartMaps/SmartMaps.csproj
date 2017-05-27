@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EDrawingMode.cs" />
     <Compile Include="SVGDesigner.cs" />
     <Compile Include="SvgTemplate.cs">
       <AutoGen>True</AutoGen>

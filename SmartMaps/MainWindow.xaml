@@ -36,9 +36,9 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Button Content="Gebäudeteil"/>
-                    <Button Grid.Row="1" Content="Straße"/>
-                    <Button Grid.Row="2" Content="Gehweg"/>
+                    <Button Content="Gebäudeteil" Click="Building_Mode_Clicked"/>
+                    <Button Grid.Row="1" Content="Straße" Click="Street_Mode_Clicked"/>
+                    <Button Grid.Row="2" Content="Gehweg" Click="Pavement_Mode_Clicked"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Objekte">
@@ -54,14 +54,14 @@
                 </TreeView>
             </TabItem>
         </TabControl>
-        <Canvas x:Name="main_canvas" Grid.Column="1" Grid.Row="1" MouseDown="Rectangle_Click" >
+        <Canvas x:Name="main_canvas" Grid.Column="1" Grid.Row="1"  MouseMove="Canvas_MouseMove_1" MouseDown="Canvas_MouseDown_1">
 
             <Image Height="449" Width="353" Source="Resources/KarteHTW.png" Loaded="Image_Loaded"/>
 
             <Line X1="175" X2="175" Y1="0" Y2="449" Fill="Red" Stroke="Red"></Line>
-            <Rectangle Height="23" Width="74" RenderTransformOrigin="0.52,0.47" Canvas.Left="74" Canvas.Top="10" Stroke="Blue"></Rectangle>
+            <Rectangle Height="23" Width="74" RenderTransformOrigin="0.52,0.47" Canvas.Left="74" Fill="Transparent" Canvas.Top="10" Stroke="Blue" MouseDown="RectangleClick"></Rectangle>
             <Label Content="Z_P1" Canvas.Left="74" Canvas.Top="10" Height="23" Width="74"></Label>
-            <Rectangle Height="120" Width="36" Canvas.Left="91" Canvas.Top="33" MouseDown="RectangleClick"></Rectangle>
+            <Rectangle Height="120" Width="36" Canvas.Left="91" Canvas.Top="33" MouseDown="RectangleClick" Stroke="Blue" Fill="Transparent"></Rectangle>
             <Label Content="Z_P2" RenderTransformOrigin="0.533,0.462" Canvas.Left="91" Canvas.Top="127"/>
         </Canvas>
     </Grid>
