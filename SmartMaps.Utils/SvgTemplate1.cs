@@ -7,15 +7,15 @@
 //     der Code neu generiert wird.
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace SmartMaps
+namespace SmartMaps.Utils
 {
     using System;
-    
+
     /// <summary>
     /// Class to produce the template output
     /// </summary>
-    
-    #line 1 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 1 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class SvgTemplate : SvgTemplateBase
     {
@@ -31,481 +31,481 @@ namespace SmartMaps
 		<rect id=""plane1"" x=""0"" y=""0"" height=""1800"" width=""3000"" style=""stroke:#000000; fill: #ffffff""/>
 		<g id=""s_1_k"">
 			<path d=""M 0 ");
-            
-            #line 7 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(0.25*Width + Depth));
-            
-            #line default
-            #line hidden
+
+#line 7 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(0.25 * Width + Depth));
+
+#line default
+#line hidden
             this.Write(" \r\n\t\t\t\tL ");
-            
-            #line 8 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 8 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write(" ");
-            
-            #line 8 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 8 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write(" \r\n\t\t\t\tL ");
-            
-            #line 9 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 9 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write(" ");
-            
-            #line 9 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 9 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write(" \r\n\t\t\t\tL ");
-            
-            #line 10 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 10 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write(" 0 \r\n\t\t\t\tL ");
-            
-            #line 11 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 11 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level + Height));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write(" 0 \r\n\t\t\t\tL ");
-            
-            #line 12 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level + Height + (0.25*Width)));
-            
-            #line default
-            #line hidden
+
+#line 12 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level + Height + (0.25 * Width)));
+
+#line default
+#line hidden
             this.Write(" ");
-            
-            #line 12 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(0.25*Depth));
-            
-            #line default
-            #line hidden
+
+#line 12 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(0.25 * Depth));
+
+#line default
+#line hidden
             this.Write(" \r\n\t\t\t\tL ");
-            
-            #line 13 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level + Height + (0.25*Width)));
-            
-            #line default
-            #line hidden
+
+#line 13 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level + Height + (0.25 * Width)));
+
+#line default
+#line hidden
             this.Write(" ");
-            
-            #line 13 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(0.75*Depth));
-            
-            #line default
-            #line hidden
+
+#line 13 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(0.75 * Depth));
+
+#line default
+#line hidden
             this.Write(" \r\n\t\t\t\tL ");
-            
-            #line 14 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 14 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level + Height));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("  ");
-            
-            #line 14 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 14 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write(" \r\n\t\t\t\tL ");
-            
-            #line 15 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(2* Level + 2*Height+ 2*Depth));
-            
-            #line default
-            #line hidden
+
+#line 15 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(2 * Level + 2 * Height + 2 * Depth));
+
+#line default
+#line hidden
             this.Write(" ");
-            
-            #line 15 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 15 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\r\n\t\t\t\tL ");
-            
-            #line 16 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(3*Depth + 2*Height + 2*Level));
-            
-            #line default
-            #line hidden
+
+#line 16 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(3 * Depth + 2 * Height + 2 * Level));
+
+#line default
+#line hidden
             this.Write(" ");
-            
-            #line 16 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(Depth + 0.25*Width));
-            
-            #line default
-            #line hidden
+
+#line 16 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Depth + 0.25 * Width));
+
+#line default
+#line hidden
             this.Write("\r\n\t\t\t\tL ");
-            
-            #line 17 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(3*Depth + 2*Height + 2*Level));
-            
-            #line default
-            #line hidden
+
+#line 17 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(3 * Depth + 2 * Height + 2 * Level));
+
+#line default
+#line hidden
             this.Write(" ");
-            
-            #line 17 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(Depth + 0.75*Width));
-            
-            #line default
-            #line hidden
+
+#line 17 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Depth + 0.75 * Width));
+
+#line default
+#line hidden
             this.Write("\r\n\t\t\t\tL ");
-            
-            #line 18 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(2*Depth + 2*Height + 2*Level));
-            
-            #line default
-            #line hidden
+
+#line 18 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(2 * Depth + 2 * Height + 2 * Level));
+
+#line default
+#line hidden
             this.Write(" ");
-            
-            #line 18 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 18 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Width));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\r\n\t\t\t\tL ");
-            
-            #line 19 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 19 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Height + Level));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write(" ");
-            
-            #line 19 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 19 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Width));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\t\t\t\t\r\n\t\t\t\tL ");
-            
-            #line 20 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level + Height + (0.25*Width)));
-            
-            #line default
-            #line hidden
+
+#line 20 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level + Height + (0.25 * Width)));
+
+#line default
+#line hidden
             this.Write(" ");
-            
-            #line 20 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(Width + 1.25*Depth));
-            
-            #line default
-            #line hidden
+
+#line 20 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Width + 1.25 * Depth));
+
+#line default
+#line hidden
             this.Write(" \t\t\t\t\r\n\t\t\t\tL ");
-            
-            #line 21 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level + Height + (0.25*Width)));
-            
-            #line default
-            #line hidden
+
+#line 21 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level + Height + (0.25 * Width)));
+
+#line default
+#line hidden
             this.Write(" ");
-            
-            #line 21 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(Width + 1.75*Depth));
-            
-            #line default
-            #line hidden
+
+#line 21 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Width + 1.75 * Depth));
+
+#line default
+#line hidden
             this.Write(" \r\n\t\t\t\tL ");
-            
-            #line 22 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 22 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level + Height));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write(" ");
-            
-            #line 22 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(Width + 2*Depth));
-            
-            #line default
-            #line hidden
+
+#line 22 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Width + 2 * Depth));
+
+#line default
+#line hidden
             this.Write(" \r\n\t\t\t\tL ");
-            
-            #line 23 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 23 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write(" ");
-            
-            #line 23 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(Width + 2*Depth));
-            
-            #line default
-            #line hidden
+
+#line 23 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Width + 2 * Depth));
+
+#line default
+#line hidden
             this.Write(" \r\n\t\t\t\tL ");
-            
-            #line 24 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 24 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write(" ");
-            
-            #line 24 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 24 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Width + Depth));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write(" \r\n\t\t\t\tL ");
-            
-            #line 25 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 25 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write(" ");
-            
-            #line 25 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 25 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Width + Depth));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\r\n\t\t\t\tL 0 ");
-            
-            #line 26 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(0.75 *Width + Depth));
-            
-            #line default
-            #line hidden
+
+#line 26 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(0.75 * Width + Depth));
+
+#line default
+#line hidden
             this.Write("\r\n\t\t\t\tz\" fill=\"#ffffff\" stroke=\"blue\" stroke-width=\"0.1mm\" />\r\n\t\t\t<line x1=\"");
-            
-            #line 28 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 28 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" y1=\"");
-            
-            #line 28 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 28 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" x2=\"");
-            
-            #line 28 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 28 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" y2=\"");
-            
-            #line 28 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 28 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Width));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" stroke=\"red\" stroke-width=\"0.1mm\"/>\r\n\t\t\t<line x1=\"");
-            
-            #line 29 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 29 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" y1=\"");
-            
-            #line 29 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 29 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" x2=\"");
-            
-            #line 29 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 29 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" y2=\"");
-            
-            #line 29 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 29 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Width));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" stroke=\"grey\" stroke-width=\"0.1mm\"/>\r\n\t\t\t<line x1=\"");
-            
-            #line 30 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 30 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level + Height));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" y1=\"0\" x2=\"");
-            
-            #line 30 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 30 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level + Height));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" y2=\"");
-            
-            #line 30 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(Width + 2*Depth));
-            
-            #line default
-            #line hidden
+
+#line 30 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Width + 2 * Depth));
+
+#line default
+#line hidden
             this.Write(" \" stroke=\"red\" stroke-width=\"0.1mm\"/>\t\t\t\t\t\r\n\t\t\t<line x1=\"");
-            
-            #line 31 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(2*Depth + Level + Height));
-            
-            #line default
-            #line hidden
+
+#line 31 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(2 * Depth + Level + Height));
+
+#line default
+#line hidden
             this.Write("\" y1=\"");
-            
-            #line 31 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 31 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" x2=\"");
-            
-            #line 31 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(2*Depth + Level + Height));
-            
-            #line default
-            #line hidden
+
+#line 31 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(2 * Depth + Level + Height));
+
+#line default
+#line hidden
             this.Write("\" y2=\"");
-            
-            #line 31 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 31 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Width));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" stroke=\"red\" stroke-width=\"0.1mm\"/>\t\r\n\t\t\t<line x1=\"");
-            
-            #line 32 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(2*Depth +  Level + 2*Height));
-            
-            #line default
-            #line hidden
+
+#line 32 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(2 * Depth + Level + 2 * Height));
+
+#line default
+#line hidden
             this.Write("\" y1=\"");
-            
-            #line 32 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 32 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" x2=\"");
-            
-            #line 32 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(2*Depth +  Level + 2*Height));
-            
-            #line default
-            #line hidden
+
+#line 32 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(2 * Depth + Level + 2 * Height));
+
+#line default
+#line hidden
             this.Write("\" y2=\"");
-            
-            #line 32 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 32 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Width));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" stroke=\"grey\" stroke-width=\"0.1mm\"/>\t\t\t\t\t\r\n\t\t\t<line x1=\"");
-            
-            #line 33 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(2*Depth + 2* Level + 2*Height));
-            
-            #line default
-            #line hidden
+
+#line 33 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(2 * Depth + 2 * Level + 2 * Height));
+
+#line default
+#line hidden
             this.Write("\" y1=\"");
-            
-            #line 33 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 33 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" x2=\"");
-            
-            #line 33 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(2*Depth + 2* Level + 2*Height));
-            
-            #line default
-            #line hidden
+
+#line 33 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(2 * Depth + 2 * Level + 2 * Height));
+
+#line default
+#line hidden
             this.Write("\" y2=\"");
-            
-            #line 33 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 33 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Width));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" stroke=\"red\" stroke-width=\"0.1mm\"/>\r\n\t\t\t<line x1=\"");
-            
-            #line 34 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 34 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" y1=\"");
-            
-            #line 34 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 34 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" x2=\"");
-            
-            #line 34 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 34 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level + Height));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" y2=\"");
-            
-            #line 34 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 34 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" stroke=\"red\" stroke-width=\"0.1mm\"/>\r\n\t\t\t<line x1=\"");
-            
-            #line 35 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 35 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" y1=\"");
-            
-            #line 35 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 35 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Width));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" x2=\"");
-            
-            #line 35 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 35 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Level + Height));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" y2=\"");
-            
-            #line 35 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
+
+#line 35 "D:\Hochschule\3. Semester\Spiele und Interaktionstechniken\SmartMaps\SmartMaps\SvgTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Depth + Width));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\" stroke=\"red\" stroke-width=\"0.1mm\"/>\r\n\t\t</g>\r\n\t</g>\r\n</svg>\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }
-    
-    #line default
-    #line hidden
+
+#line default
+#line hidden
     #region Base class
     /// <summary>
     /// Base class for this transformation
@@ -605,7 +605,7 @@ namespace SmartMaps
             }
             // If we're starting off, or if the previous text ended with a newline,
             // we have to append the current indent first.
-            if (((this.GenerationEnvironment.Length == 0) 
+            if (((this.GenerationEnvironment.Length == 0)
                         || this.endsWithNewline))
             {
                 this.GenerationEnvironment.Append(this.currentIndentField);
@@ -723,7 +723,7 @@ namespace SmartMaps
         /// </summary>
         public class ToStringInstanceHelper
         {
-            private System.IFormatProvider formatProviderField  = global::System.Globalization.CultureInfo.InvariantCulture;
+            private System.IFormatProvider formatProviderField = global::System.Globalization.CultureInfo.InvariantCulture;
             /// <summary>
             /// Gets or sets format provider to be used by ToStringWithCulture method.
             /// </summary>
@@ -731,13 +731,13 @@ namespace SmartMaps
             {
                 get
                 {
-                    return this.formatProviderField ;
+                    return this.formatProviderField;
                 }
                 set
                 {
                     if ((value != null))
                     {
-                        this.formatProviderField  = value;
+                        this.formatProviderField = value;
                     }
                 }
             }

@@ -1,5 +1,4 @@
-﻿using SmartMaps;
-using System;
+﻿using System;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
@@ -7,6 +6,7 @@ using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Media;
+using SmartMaps.Utils;
 
 namespace SmartMaps
 {
@@ -53,23 +53,7 @@ namespace SmartMaps
             switch (drawMode)
             {
                 case EDrawingMode.building:
-                    if(activDrawingObject as Rectangle != null) myCanvas.Children.Remove((Rectangle)activDrawingObject);
-                    Rectangle rect = activDrawingObject as Rectangle ?? new Rectangle();
-                    rect.Stroke = SystemColors.ControlDarkDarkBrush;
-                    double xPosition = e.GetPosition(myCanvas).X > 0 ? e.GetPosition(myCanvas).X : 0.0;
-                    double yPosition = e.GetPosition(myCanvas).Y > 0 ? e.GetPosition(myCanvas).Y : 0.0;
-                    double maxX = Math.Max(ClickX, xPosition);
-                    double minX = Math.Min(ClickX, xPosition);
-                    double maxY = Math.Max(ClickY, yPosition);
-                    double minY = Math.Min(ClickY, yPosition);
-                    rect.Width = maxX - minX;
-                    rect.Height = maxY - minY;
-
-                    
-                    myCanvas.Children.Add(rect);
-                    Canvas.SetLeft(rect, minX);
-                    Canvas.SetTop(rect, minY);
-                    activDrawingObject = rect;
+                    DrawRectangle(3.0, Brushes.Blue, myCanvas, e);
                     break;
                 case EDrawingMode.street:
                     DrawLine(4.0, Brushes.Gray, myCanvas, e);
@@ -78,6 +62,26 @@ namespace SmartMaps
                     DrawLine(2.0, Brushes.Green, myCanvas, e);
                     break;
             }
+        }
+
+        private void DrawRectangle(double v, SolidColorBrush colorBrush, Canvas myCanvas, MouseEventArgs e)
+        {
+            if (activDrawingObject as Rectangle != null) myCanvas.Children.Remove((Rectangle)activDrawingObject);
+            Rectangle rect = activDrawingObject as Rectangle ?? new Rectangle();
+            rect.Stroke = colorBrush;
+            rect.StrokeThickness = v;
+            double xPosition = e.GetPosition(myCanvas).X > 0 ? e.GetPosition(myCanvas).X : 0.0;
+            double yPosition = e.GetPosition(myCanvas).Y > 0 ? e.GetPosition(myCanvas).Y : 0.0;
+            double maxX = Math.Max(ClickX, xPosition);
+            double minX = Math.Min(ClickX, xPosition);
+            double maxY = Math.Max(ClickY, yPosition);
+            double minY = Math.Min(ClickY, yPosition);
+            rect.Width = maxX - minX;
+            rect.Height = maxY - minY;
+            myCanvas.Children.Add(rect);
+            Canvas.SetLeft(rect, minX);
+            Canvas.SetTop(rect, minY);
+            activDrawingObject = rect;
         }
 
         private void DrawLine(double v, SolidColorBrush colorBrush, Canvas myCanvas, MouseEventArgs e)
@@ -116,9 +120,6 @@ namespace SmartMaps
 
         private void Image_Loaded(object sender, RoutedEventArgs e)
         {
-           
-            // ... Assign Source.
-           // image.Source = (ImageSource)SmartMaps.Properties.Resources.KarteHTW;
             MemoryStream ms = new MemoryStream();
             SmartMaps.Properties.Resources.KarteHTW.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
             BitmapImage img = new BitmapImage();
@@ -126,9 +127,6 @@ namespace SmartMaps
             ms.Seek(0, SeekOrigin.Begin);
             img.StreamSource = ms;
             img.EndInit();
-            
-
-            // ... Get Image reference from sender.
             var image = sender as Image;
             image.Source = img;
         }
@@ -146,7 +144,20 @@ namespace SmartMaps
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-           Console.Out.Write( SVGDesigner.makeQuader(100,200,130));
+            String mySvg = SVGDesigner.makeQuader(100,200,130);
+            Microsoft.Win32.SaveFileDialog dlg = new Microsoft.Win32.SaveFileDialog();
+            dlg.FileName = "schnittmuster"; // Default file name
+            dlg.DefaultExt = ".svg"; // Default file extension
+            dlg.Filter = "SVG Grafiken (.svg)|*.svg"; // Filter files by extension
+
+            // Show save file dialog box
+            Nullable<bool> result = dlg.ShowDialog();
+
+            // Process save file dialog box results
+            if (result == true)
+            {
+                File.WriteAllText(dlg.FileName, mySvg);
+            }
         }
 
         private void Building_Mode_Clicked(object sender, RoutedEventArgs e)

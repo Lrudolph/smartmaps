@@ -1,0 +1,5 @@
+C:\Users\Linda\Source\Repos\smartmaps\SmartMaps.Data\obj\Debug\SmartMaps.Data.csprojResolveAssemblyReference.cache
+C:\Users\Linda\Source\Repos\smartmaps\SmartMaps.Data\bin\Debug\SmartMaps.Data.dll
+C:\Users\Linda\Source\Repos\smartmaps\SmartMaps.Data\bin\Debug\SmartMaps.Data.pdb
+C:\Users\Linda\Source\Repos\smartmaps\SmartMaps.Data\obj\Debug\SmartMaps.Data.dll
+C:\Users\Linda\Source\Repos\smartmaps\SmartMaps.Data\obj\Debug\SmartMaps.Data.pdb

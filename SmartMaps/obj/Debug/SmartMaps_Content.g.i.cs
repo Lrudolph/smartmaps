@@ -8,7 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("svgtemplate.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("yamltemplate.tt")]
 
 

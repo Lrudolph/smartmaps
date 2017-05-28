@@ -7,17 +7,20 @@
 //     der Code neu generiert wird.
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace SmartMaps
+namespace SmartMaps.Utils
 {
+    using System.Linq;
+    using System.Text;
+    using System.Collections.Generic;
     using System;
     
     /// <summary>
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\Linda\Source\Repos\smartmaps\SmartMaps\YamlTemplate.tt"
+    #line 1 "C:\Users\Linda\Source\Repos\smartmaps\SmartMaps.Utils\TipToiTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
-    public partial class YamlTemplate : YamlTemplateBase
+    public partial class TipToiTemplate : TipToiTemplateBase
     {
 #line hidden
         /// <summary>
@@ -53,7 +56,8 @@ scripts:
   - $1==2? P(two)
   - $1==3? P(three)
   # Besides == and !=, there are also the comparisons < and >=
-  - $1!=1? $1 != 2? $1 != 3? $1:=0 P(back)");
+  - $1!=1? $1 != 2? $1 != 3? $1:=0 P(back)
+");
             return this.GenerationEnvironment.ToString();
         }
     }
@@ -65,7 +69,7 @@ scripts:
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
-    public class YamlTemplateBase
+    public class TipToiTemplateBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;
