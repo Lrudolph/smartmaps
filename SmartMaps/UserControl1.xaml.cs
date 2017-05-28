@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace SmartMaps
 {
     /// <summary>
-    /// Interaktionslogik für buildingmenu.xaml
+    /// Interaktionslogik für UserControl1.xaml
     /// </summary>
-    public partial class buildingmenu : UserControl
+    public partial class UserControl1 : UserControl
     {
-        public buildingmenu()
+        public UserControl1()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Visibility = Visibility.Collapsed;
         }
     }
 }

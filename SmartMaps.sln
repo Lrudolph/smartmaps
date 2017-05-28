@@ -1,15 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26206.0
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartMaps", "SmartMaps\SmartMaps.csproj", "{749B69EE-7364-4DF7-BF23-8045E3C0BBA8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C2CE80AB-369D-418D-809E-5C7B65E32C5A}"
-	ProjectSection(SolutionItems) = preProject
-		SmartMaps\buildingmenu.xaml = SmartMaps\buildingmenu.xaml
-		SmartMaps\buildingmenu.xaml.cs = SmartMaps\buildingmenu.xaml.cs
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

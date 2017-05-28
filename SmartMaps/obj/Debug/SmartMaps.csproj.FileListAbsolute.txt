@@ -30,3 +30,6 @@ C:\Users\Linda\Source\Repos\smartmaps\SmartMaps\obj\Debug\SmartMaps.Properties.R
 C:\Users\Linda\Source\Repos\smartmaps\SmartMaps\obj\Debug\SmartMaps.csproj.GenerateResource.Cache
 C:\Users\Linda\Source\Repos\smartmaps\SmartMaps\obj\Debug\SmartMaps.exe
 C:\Users\Linda\Source\Repos\smartmaps\SmartMaps\obj\Debug\SmartMaps.pdb
+C:\Users\Linda\Source\Repos\smartmaps\SmartMaps\obj\Debug\UserControl1.g.cs
+C:\Users\Linda\Source\Repos\smartmaps\SmartMaps\obj\Debug\SmartMaps_MarkupCompile.lref
+C:\Users\Linda\Source\Repos\smartmaps\SmartMaps\obj\Debug\UserControl1.baml

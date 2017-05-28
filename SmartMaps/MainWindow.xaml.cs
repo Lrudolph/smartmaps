@@ -1,21 +1,14 @@
 ﻿using SmartMaps;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media;
 
-namespace WpfApplication1
+namespace SmartMaps
 {
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
@@ -32,13 +25,13 @@ namespace WpfApplication1
         {
             InitializeComponent();
         }
+        
 
         private void Canvas_MouseDown_1(object sender, MouseButtonEventArgs e)
         {
             Canvas myCanvas = (Canvas)sender;
             ClickX = e.GetPosition(myCanvas).X;
             ClickY = e.GetPosition(myCanvas).Y;
-
             myCanvas.MouseMove += DrawingFunctionality;
             if (e.ButtonState == MouseButtonState.Pressed)
                 currentPoint = e.GetPosition(this);
@@ -49,6 +42,8 @@ namespace WpfApplication1
         {
             Canvas myCanvas = (Canvas)sender;
             myCanvas.MouseMove -= DrawingFunctionality;
+            ClickX = 0.0;
+            ClickY = 0.0;
             activDrawingObject = null;
         }
 
@@ -58,26 +53,50 @@ namespace WpfApplication1
             switch (drawMode)
             {
                 case EDrawingMode.building:
-                    
+                    if(activDrawingObject as Rectangle != null) myCanvas.Children.Remove((Rectangle)activDrawingObject);
                     Rectangle rect = activDrawingObject as Rectangle ?? new Rectangle();
-                    //rect.Stroke = new Brush(Colors.Blue);
-                    rect.Width = e.GetPosition(myCanvas).X - ClickX;
-                    rect.Height = e.GetPosition(myCanvas).Y - ClickY;
+                    rect.Stroke = SystemColors.ControlDarkDarkBrush;
+                    double xPosition = e.GetPosition(myCanvas).X > 0 ? e.GetPosition(myCanvas).X : 0.0;
+                    double yPosition = e.GetPosition(myCanvas).Y > 0 ? e.GetPosition(myCanvas).Y : 0.0;
+                    double maxX = Math.Max(ClickX, xPosition);
+                    double minX = Math.Min(ClickX, xPosition);
+                    double maxY = Math.Max(ClickY, yPosition);
+                    double minY = Math.Min(ClickY, yPosition);
+                    rect.Width = maxX - minX;
+                    rect.Height = maxY - minY;
 
-                    myCanvas.Children.Remove(rect);
-                    myCanvas.Children.Add(rect);
-                    Canvas.SetLeft(rect, ClickX);
-                    Canvas.SetTop(rect, ClickY);
                     
+                    myCanvas.Children.Add(rect);
+                    Canvas.SetLeft(rect, minX);
+                    Canvas.SetTop(rect, minY);
+                    activDrawingObject = rect;
                     break;
                 case EDrawingMode.street:
+                    DrawLine(4.0, Brushes.Gray, myCanvas, e);
                     break;
                 case EDrawingMode.pavement:
+                    DrawLine(2.0, Brushes.Green, myCanvas, e);
                     break;
             }
         }
 
-            private void Canvas_MouseMove_1(object sender, MouseEventArgs e)
+        private void DrawLine(double v, SolidColorBrush colorBrush, Canvas myCanvas, MouseEventArgs e)
+        {
+            if (activDrawingObject as Line != null) myCanvas.Children.Remove((Line)activDrawingObject);
+            Line line = activDrawingObject as Line ?? new Line();
+            line.StrokeThickness = v;
+            line.Stroke = colorBrush;
+            double xPosition = e.GetPosition(myCanvas).X > 0 ? e.GetPosition(myCanvas).X : 0.0;
+            double yPosition = e.GetPosition(myCanvas).Y > 0 ? e.GetPosition(myCanvas).Y : 0.0;
+            line.X2 = xPosition;
+            line.X1 = ClickX;
+            line.Y1 = ClickY;
+            line.Y2 = yPosition;
+            myCanvas.Children.Add(line);
+            activDrawingObject = line;
+        }
+
+        private void Canvas_MouseMove_1(object sender, MouseEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
@@ -143,7 +162,6 @@ namespace WpfApplication1
         private void Pavement_Mode_Clicked(object sender, RoutedEventArgs e)
         {
             this.drawMode = EDrawingMode.pavement;
-        }
         }
     }
 }
