@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SmartMaps.Utils
+﻿namespace SmartMaps.Utils
 {
     partial class SvgTemplate
     {
@@ -19,7 +13,5 @@ namespace SmartMaps.Utils
             this.Depth = depth;
             this.Level = level;
         }
-
-        
     }
 }
