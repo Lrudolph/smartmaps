@@ -2,9 +2,9 @@
 {
     partial class SvgTemplate
     {
-        int Height;
-        int Width;
-        int Depth;
+        public int Height { get; private set; }
+        public int Width { get; private set; }
+        public int Depth { get; private set; }
         public int Level { get; private set; }
         public SvgTemplate(int height, int width, int depth, int level)
         {

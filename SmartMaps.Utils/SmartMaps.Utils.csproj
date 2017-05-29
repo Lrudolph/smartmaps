@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SVGDesigner.cs" />
-    <Compile Include="SvgTemplate1.cs">
+    <Compile Include="SvgTemplate.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SvgTemplate.tt</DependentUpon>
@@ -56,8 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="SvgTemplate.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SvgTemplate1.cs</LastGenOutput>
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>SvgTemplate.cs</LastGenOutput>
     </Content>
     <Content Include="TipToiTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
