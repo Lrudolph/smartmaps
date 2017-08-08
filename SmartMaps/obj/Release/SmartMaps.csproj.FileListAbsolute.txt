@@ -18,3 +18,7 @@ C:\Users\Linda\Source\Repos\smartmaps\SmartMaps\obj\Release\SmartMaps.Properties
 C:\Users\Linda\Source\Repos\smartmaps\SmartMaps\obj\Release\SmartMaps.csproj.GenerateResource.Cache
 C:\Users\Linda\Source\Repos\smartmaps\SmartMaps\obj\Release\SmartMaps.exe
 C:\Users\Linda\Source\Repos\smartmaps\SmartMaps\obj\Release\SmartMaps.pdb
+C:\Users\Linda\Source\Repos\smartmaps\SmartMaps\bin\Release\SmartMaps.exe.manifest
+C:\Users\Linda\Source\Repos\smartmaps\SmartMaps\bin\Release\SmartMaps.application
+C:\Users\Linda\Source\Repos\smartmaps\SmartMaps\obj\Release\SmartMaps.exe.manifest
+C:\Users\Linda\Source\Repos\smartmaps\SmartMaps\obj\Release\SmartMaps.application
