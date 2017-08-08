@@ -7,6 +7,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Media;
 using SmartMaps.Utils;
+using Microsoft.Win32;
 
 namespace SmartMaps
 {
@@ -173,6 +174,22 @@ namespace SmartMaps
         private void Pavement_Mode_Clicked(object sender, RoutedEventArgs e)
         {
             this.drawMode = EDrawingMode.pavement;
+        }
+
+        private void Load_Reference_Image_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "image files (*.png)|*.png";
+            if (openFileDialog1.ShowDialog() == true)
+            {
+                String imagename = openFileDialog1.FileName;
+                Console.WriteLine(imagename);
+                BitmapImage image = new BitmapImage(new Uri(imagename,
+                                             UriKind.Absolute));
+                image.CacheOption = BitmapCacheOption.OnLoad;
+                image.Freeze();
+                resource_img.Source = image;
+            }
         }
     }
 }

@@ -1,0 +1,4 @@
+C:\Users\Linda\Source\Repos\smartmaps\SmartMaps.Data\bin\Release\SmartMaps.Data.dll
+C:\Users\Linda\Source\Repos\smartmaps\SmartMaps.Data\bin\Release\SmartMaps.Data.pdb
+C:\Users\Linda\Source\Repos\smartmaps\SmartMaps.Data\obj\Release\SmartMaps.Data.dll
+C:\Users\Linda\Source\Repos\smartmaps\SmartMaps.Data\obj\Release\SmartMaps.Data.pdb
