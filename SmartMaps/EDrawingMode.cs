@@ -2,6 +2,6 @@
 {
     enum EDrawingMode
     {
-        building, street, pavement
+        rectangle, zylinder, building, street, line
     }
 }

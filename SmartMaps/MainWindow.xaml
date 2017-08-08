@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:c="clr-namespace:SmartMaps.Data;assembly=SmartMaps.Data"
-        Title="MainWindow" Height="500" Width="600">
+        Title="MainWindow" Height="700" Width="900">
     <Window.Resources>
         <c:MapProject x:Key="myDataSource"/>
     </Window.Resources>
@@ -43,18 +43,20 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Button Content="Rechteck" Click="Building_Mode_Clicked"/>
-                    <Button Grid.Row="1" Content="Zylinder" Click="Street_Mode_Clicked"/>
-                    <Button Grid.Row="2" Content="Gehweg" Click="Pavement_Mode_Clicked"/>
+                    <Button Content="Rechteck" Click="Rectangle_Mode_Clicked">
+                    </Button>
+                    <Button Grid.Row="1" Content="Zylinder" Click="Zylinder_Mode_Clicked"/>
+                    <Button Grid.Row="2" Content="Talfalte" Click="Line_Mode_Clicked"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Objekte">
                 <TreeView>
-                    <TreeViewItem Header="Gebäude" ItemsSource="{Binding Path=Buildingparts}">
+                    <TreeViewItem Header="Quader" ItemsSource="{Binding Path=Rectangles}">
+                       
                     </TreeViewItem>
-                    <TreeViewItem Header="Straßen" ItemsSource="{Binding Path=Wayparts}">
+                    <TreeViewItem Header="Zylinder" ItemsSource="{Binding Path=Circles}">
                     </TreeViewItem>
-                    <TreeViewItem Header="Gehwege"></TreeViewItem>
+                    <TreeViewItem Header="Talfalten"></TreeViewItem>
                 </TreeView>
             </TabItem>
         </TabControl>
@@ -62,11 +64,6 @@
 
             <Image x:Name="resource_img" Source="Resources/KarteHTW.png" Loaded="Image_Loaded" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
-            <Line X1="175" X2="175" Y1="0" Y2="449" Fill="Red" Stroke="Red"></Line>
-            <Rectangle Height="23" Width="74" RenderTransformOrigin="0.52,0.47" Canvas.Left="74" Fill="Transparent" Canvas.Top="10" Stroke="Blue" MouseDown="RectangleClick"></Rectangle>
-            <Label Content="Z_P1" Canvas.Left="74" Canvas.Top="10" Height="23" Width="74"></Label>
-            <Rectangle Height="120" Width="36" Canvas.Left="91" Canvas.Top="33" MouseDown="RectangleClick" Stroke="Blue" Fill="Transparent"></Rectangle>
-            <Label Content="Z_P2" RenderTransformOrigin="0.533,0.462" Canvas.Left="91" Canvas.Top="127"/>
         </Canvas>
     </Grid>
 </Window>

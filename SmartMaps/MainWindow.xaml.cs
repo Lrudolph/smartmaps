@@ -8,6 +8,7 @@ using System.Windows.Shapes;
 using System.Windows.Media;
 using SmartMaps.Utils;
 using Microsoft.Win32;
+using SmartMaps.Data;
 
 namespace SmartMaps
 {
@@ -21,10 +22,13 @@ namespace SmartMaps
         private Object activDrawingObject;
         private double ClickX = 0.0;
         private double ClickY = 0.0;
+        private MapProject myDataSource;
 
         public MainWindow()
         {
             InitializeComponent();
+            myDataSource = new MapProject();
+            DataContext = myDataSource;
         }
         
 
@@ -41,11 +45,25 @@ namespace SmartMaps
 
         private void MyCanvas_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            Canvas myCanvas = (Canvas)sender;
-            myCanvas.MouseMove -= DrawingFunctionality;
-            ClickX = 0.0;
-            ClickY = 0.0;
-            activDrawingObject = null;
+            if (activDrawingObject != null)
+            {
+                Canvas myCanvas = (Canvas)sender;
+                switch (drawMode)
+                {
+                    case EDrawingMode.rectangle:
+                        Rectangle rect = activDrawingObject as Rectangle;
+                        myDataSource.Rectangles.Add(new Building(rect.ActualHeight, rect.ActualWidth, 100, new Point(ClickX, ClickY), true));
+                        break;
+                    case EDrawingMode.zylinder:
+                        Ellipse ellipse = activDrawingObject as Ellipse;
+                        myDataSource.Circles.Add(new Building(ellipse.ActualHeight, ellipse.ActualWidth, 100, new Point(ClickX, ClickY), false));
+                        break;
+                }
+                myCanvas.MouseMove -= DrawingFunctionality;
+                ClickX = 0.0;
+                ClickY = 0.0;
+                activDrawingObject = null;
+            }
         }
 
         private void DrawingFunctionality(object sender, MouseEventArgs e)
@@ -53,16 +71,36 @@ namespace SmartMaps
             Canvas myCanvas = (Canvas)sender;
             switch (drawMode)
             {
-                case EDrawingMode.building:
+                case EDrawingMode.rectangle:
                     DrawRectangle(3.0, Brushes.Blue, myCanvas, e);
                     break;
-                case EDrawingMode.street:
-                    DrawLine(4.0, Brushes.Gray, myCanvas, e);
+                case EDrawingMode.zylinder:
+                    DrawZylinder(3.0, Brushes.Blue, myCanvas, e);
                     break;
-                case EDrawingMode.pavement:
-                    DrawLine(2.0, Brushes.Green, myCanvas, e);
+                case EDrawingMode.line:
+                    DrawLine(2.0, Brushes.Red, myCanvas, e);
                     break;
             }
+        }
+
+        private void DrawZylinder(double v, SolidColorBrush colorBrush, Canvas myCanvas, MouseEventArgs e)
+        {
+            if (activDrawingObject as Ellipse != null) myCanvas.Children.Remove((Ellipse)activDrawingObject);
+            Ellipse rect = activDrawingObject as Ellipse ?? new Ellipse();
+            rect.Stroke = colorBrush;
+            rect.StrokeThickness = v;
+            double xPosition = e.GetPosition(myCanvas).X > 0 ? e.GetPosition(myCanvas).X : 0.0;
+            double yPosition = e.GetPosition(myCanvas).Y > 0 ? e.GetPosition(myCanvas).Y : 0.0;
+            double maxX = Math.Max(ClickX, xPosition);
+            double minX = Math.Min(ClickX, xPosition);
+            double maxY = Math.Max(ClickY, yPosition);
+            double minY = Math.Min(ClickY, yPosition);
+            rect.Width = maxX - minX;
+            rect.Height = maxY - minY;
+            myCanvas.Children.Add(rect);
+            Canvas.SetLeft(rect, minX);
+            Canvas.SetTop(rect, minY);
+            activDrawingObject = rect;
         }
 
         private void DrawRectangle(double v, SolidColorBrush colorBrush, Canvas myCanvas, MouseEventArgs e)
@@ -146,10 +184,12 @@ namespace SmartMaps
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             String mySvg = SVGDesigner.makeQuader(100,200,130);
-            Microsoft.Win32.SaveFileDialog dlg = new Microsoft.Win32.SaveFileDialog();
-            dlg.FileName = "schnittmuster"; // Default file name
-            dlg.DefaultExt = ".svg"; // Default file extension
-            dlg.Filter = "SVG Grafiken (.svg)|*.svg"; // Filter files by extension
+            SaveFileDialog dlg = new SaveFileDialog()
+            {
+                FileName = "schnittmuster", // Default file name
+                DefaultExt = ".svg", // Default file extension
+                Filter = "SVG Grafiken (.svg)|*.svg" // Filter files by extension
+            };
 
             // Show save file dialog box
             Nullable<bool> result = dlg.ShowDialog();
@@ -161,19 +201,19 @@ namespace SmartMaps
             }
         }
 
-        private void Building_Mode_Clicked(object sender, RoutedEventArgs e)
+        private void Rectangle_Mode_Clicked(object sender, RoutedEventArgs e)
         {
-            this.drawMode = EDrawingMode.building;
+            this.drawMode = EDrawingMode.rectangle;
         }
 
-        private void Street_Mode_Clicked(object sender, RoutedEventArgs e)
+        private void Zylinder_Mode_Clicked(object sender, RoutedEventArgs e)
         {
-            this.drawMode = EDrawingMode.street;
+            this.drawMode = EDrawingMode.zylinder;
         }
 
-        private void Pavement_Mode_Clicked(object sender, RoutedEventArgs e)
+        private void Line_Mode_Clicked(object sender, RoutedEventArgs e)
         {
-            this.drawMode = EDrawingMode.pavement;
+            this.drawMode = EDrawingMode.line;
         }
 
         private void Load_Reference_Image_Click(object sender, RoutedEventArgs e)
