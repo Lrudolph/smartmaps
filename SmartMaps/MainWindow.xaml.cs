@@ -201,6 +201,26 @@ namespace SmartMaps
             }
         }
 
+        private void export_zylinder_click(object sender, RoutedEventArgs e)
+        {
+            String mySvg = SVGDesigner.makeZylinder(100, 200, 300);
+            SaveFileDialog dlg = new SaveFileDialog()
+            {
+                FileName = "schnittmuster", // Default file name
+                DefaultExt = ".svg", // Default file extension
+                Filter = "SVG Grafiken (.svg)|*.svg" // Filter files by extension
+            };
+
+            // Show save file dialog box
+            Nullable<bool> result = dlg.ShowDialog();
+
+            // Process save file dialog box results
+            if (result == true)
+            {
+                File.WriteAllText(dlg.FileName, mySvg);
+            }
+        }
+
         private void Rectangle_Mode_Clicked(object sender, RoutedEventArgs e)
         {
             this.drawMode = EDrawingMode.rectangle;
@@ -231,5 +251,7 @@ namespace SmartMaps
                 resource_img.Source = image;
             }
         }
+
+
     }
 }

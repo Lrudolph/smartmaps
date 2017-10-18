@@ -48,16 +48,26 @@
       <DependentUpon>SvgTemplate.tt</DependentUpon>
     </Compile>
     <Compile Include="SvgTemplate2.cs" />
+    <Compile Include="TemplateZylinder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TemplateZylinder.tt</DependentUpon>
+    </Compile>
     <Compile Include="TipToiTemplate.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TipToiTemplate.tt</DependentUpon>
     </Compile>
+    <Compile Include="ZylinderTemplate.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="SvgTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>SvgTemplate.cs</LastGenOutput>
+    </Content>
+    <Content Include="TemplateZylinder.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>TemplateZylinder.cs</LastGenOutput>
     </Content>
     <Content Include="TipToiTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>

@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Hs3rEuzPm5CnBc4CvU0c0pGDwpsPNd36fsCif0lYyMw=</dsig:DigestValue>
+        <dsig:DigestValue>/FRKVIEAMjezdGJVw0qtGMOs1LdF2cmWCPci5YzSqdQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SmartMaps.Utils.dll" size="17408">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SmartMaps.Utils.dll" size="19456">
       <assemblyIdentity name="SmartMaps.Utils" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>747Fp3H/EHL4ol6Yyz+eEJ3NB0t1y006wEN+LL378ns=</dsig:DigestValue>
+        <dsig:DigestValue>w21t3Uf/NpO0ToqdzB2V/7HGbagdrU52O0hWR0BAC5k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

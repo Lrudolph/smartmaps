@@ -27,8 +27,8 @@
                     <MenuItem Header="Sounddatei"/>
                 </MenuItem>
                 <MenuItem Header="_Export" >
-                    <MenuItem Header="Schnittmuster" Click="MenuItem_Click"/>
-                    <MenuItem Header="TipToi-Programm"/>
+                    <MenuItem Header="Rechteck" Click="MenuItem_Click"/>
+                    <MenuItem Header="Zylinder" Click="export_zylinder_click"/>
                     <MenuItem Header="TipToi-Code"/>
                 </MenuItem>
                 <Separator />
@@ -50,7 +50,7 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Objekte">
-                <TreeView>
+                <TreeView x:Name="objectTreeView">
                     <TreeViewItem Header="Quader" ItemsSource="{Binding Path=Rectangles}">
                        
                     </TreeViewItem>

@@ -2,3 +2,4 @@ C:\Users\Linda\Source\Repos\smartmaps\SmartMaps.Utils\bin\Release\SmartMaps.Util
 C:\Users\Linda\Source\Repos\smartmaps\SmartMaps.Utils\bin\Release\SmartMaps.Utils.pdb
 C:\Users\Linda\Source\Repos\smartmaps\SmartMaps.Utils\obj\Release\SmartMaps.Utils.dll
 C:\Users\Linda\Source\Repos\smartmaps\SmartMaps.Utils\obj\Release\SmartMaps.Utils.pdb
+C:\Users\Linda\Source\Repos\smartmaps\SmartMaps.Utils\obj\Release\SmartMaps.Utils.csprojResolveAssemblyReference.cache
